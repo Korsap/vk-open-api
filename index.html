@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>VK open API</title>
+	<script src="https://vk.com/js/api/openapi.js?152" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		VK.init({
+			apiId: 6406173
+		});
+	</script>
+	<script>
+		function auth() {
+		VK.Auth.login(function(response) {
+			console.log(response)
+		});
+	}
+	</script>
+<button onclick="auth()">Войти</button>
+</body>
+</html>
